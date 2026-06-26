@@ -6,6 +6,7 @@
   <title>Panel</title>
   <!-- LINK -->
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/form.css">
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +17,27 @@
   <%- include("partials/header") %>
 
   <main>
-    <div class="container">
-      <h1>Bienvenidos al panel</h1>
+
+    <div class="container container__form">
+
+      <form action="">
+        <h3>Login</h3>
+        <label for="username">Usuario</label>
+        <input type="text" id="username">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password">
+        <p class="message">placeholder</p>
+        <button>Ingresar</button>
+        <strong>¿Olvidaste tu contraseña?</strong>
+      </form>
     </div>
+
   </main>
 
 
   <%- include("partials/footer") %>
+
+  <script src="/js/form.js"></script>
 
 </body>
 </html>
