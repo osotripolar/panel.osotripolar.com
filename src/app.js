@@ -1,11 +1,15 @@
 
+import path from "node:path"
 import express from "express"
-import { PORT } from "./config.js"
+import { PORT , ROOT} from "./config.js"
 
 const app = express()
 
+
+app.use(express.static(path.join(ROOT,'static')))
+
 app.get('/',(req,res)=>{
-  res.send('Hola desde panel')
+  res.sendFile(path.join(ROOT,'views','index.html'))
 })
 
 app.listen(PORT,()=>{
